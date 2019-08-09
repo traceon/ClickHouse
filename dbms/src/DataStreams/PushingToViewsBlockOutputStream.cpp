@@ -81,7 +81,7 @@ Block PushingToViewsBlockOutputStream::getHeader() const
 }
 
 
-void PushingToViewsBlockOutputStream::erwrite(const Block & block)
+void PushingToViewsBlockOutputStream::write(const Block & block)
 {
     /** Throw an exception if the sizes of arrays - elements of nested data structures doesn't match.
       * We have to make this assertion before writing to table, because storage engine may assume that they have equal sizes.
